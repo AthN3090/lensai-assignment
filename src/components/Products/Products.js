@@ -4,13 +4,13 @@ import mobile from "../../../public/mobile-phone.png"
 import Image from "next/image";
 export default function Products() {
   return (
-    <section id="products" className="">
+    <section id="products">
       <div className="p-14 pb-28">
         <div className="text-5xl font-semibold text-center text-teal-900">Products</div>
-        <div className="max-w-6xl mx-auto mt-16 flex justify-center gap-10">
-        <div className="flex flex-col gap-4 justify-between items-center w-[500px]">
-          <div className=" w-16 p-3 bg-teal-700 rounded-full">
-          <Image src={sdk} alt="api-logo" />
+        <div className="max-w-6xl mx-auto mt-16 flex flex-col items-center justify-center gap-10 md:flex-row md:items-stretch ">
+        <div className="flex flex-col flex-w gap-4 justify-between items-center max-w-[500px]">
+          <div className="w-16 p-3 bg-teal-700 rounded-full">
+            <Image src={sdk} alt="api-logo" />
           </div>
           <p className="text-center text-xl font-semibold text-teal-800">Server SDK for fingerprint recognition</p>
           <p  className="text-center font-semibold underline text-3xl text-teal-900">SDK</p>
@@ -20,7 +20,7 @@ export default function Products() {
           </p>
         </div>
         <div className="border border-teal-700"></div>
-        <div className="flex flex-col gap-4 justify-between items-center w-[500px]">
+        <div className="flex flex-col gap-4 justify-between items-center max-w-[500px]">
           <div className="w-16 p-3 bg-teal-700 rounded-full">
           <Image src={api} alt="api-logo" />
           </div>
@@ -33,7 +33,7 @@ export default function Products() {
         </div>
         <div className="border border-teal-700"></div>
         
-        <div className="flex flex-col gap-4 justify-between items-center w-[500px]">
+        <div className="flex flex-col gap-4 justify-between items-center max-w-[500px]">
         <div className="w-16 p-3 bg-teal-700 rounded-full">
           <Image src={mobile} alt="api-logo" />
           </div>

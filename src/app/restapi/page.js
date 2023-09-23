@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <main>
       <section className="bg-teal-50">
-        <div className="h-[800px] w-[800px] m-auto flex flex-col justify-center items-center gap-12">
+        <div className="min-h-[800px] max-w-[800px] m-auto flex flex-col justify-center items-center gap-9">
           <p className="text-6xl font-semibold text-center text-teal-800 leading-snug mt-20">
             Server platform for fingerprint recognition
           </p>
@@ -27,7 +27,7 @@ export default function Page() {
       {/* Tabs Component */}
       <section className="text-teal-800 bg-teal-50">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-5 justify-between font-semibold">
+          <div className="grid md:grid-cols-5 grid-cols-options gap-0 overflow-x-auto justify-between font-semibold">
             <button
               className={`px-7 py-5 border-b ${
                 activeTab === 0 ? "border-b-black " : ""
@@ -72,14 +72,14 @@ export default function Page() {
           {/* Tabs content */}
           <div className="py-8">
             {activeTab === 0 && (
-              <div className="my-8 py-6">
-                <div className="flex gap-12 py-6">
+              <div className="my-8 p-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       1
                     </div>
                   </div>
-                  <div className="">
+                  <div>
                     <p className="font-semibold text-lg">
                       Fingerprints detection
                     </p>
@@ -93,13 +93,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       2
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">
                       Biometric template extraction
                     </p>
@@ -111,13 +111,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       3
                     </div>
                   </div>
-                  <div className="">
+                  <div>
                     <p className="font-semibold text-lg">Matching</p>
                     <p className=" font-sm mt-4">
                       The platform compares templates against each other in
@@ -126,13 +126,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       4
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">User authorization</p>
                     <p className=" font-sm mt-4">
                       Users are authorized with JWT (json web token) and can
@@ -143,14 +143,14 @@ export default function Page() {
               </div>
             )}
             {activeTab === 1 && (
-              <div className="my-8 py-6">
-                <div className="flex gap-12 py-6 ">
+              <div className="my-8 p-6">
+                <div className="flex gap-9 py-6 ">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       1
                     </div>
                   </div>
-                  <div className="">
+                  <div>
                     <p className="font-semibold text-lg">
                       Microservices architecture
                     </p>
@@ -163,13 +163,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6 ">
+                <div className="flex gap-9 py-6 ">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       2
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">Easy scale up</p>
                     <p className=" font-sm mt-4">
                       Detection and extraction features are separated as
@@ -181,13 +181,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6 ">
+                <div className="flex gap-9 py-6 ">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       3
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">
                       Automatic batch collection
                     </p>
@@ -200,13 +200,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6 ">
+                <div className="flex gap-9 py-6 ">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       4
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">Sandboxes</p>
                     <p className=" font-sm mt-4">
                       The platform allows to create fully isolated sandboxes.
@@ -219,7 +219,7 @@ export default function Page() {
               </div>
             )}
             {activeTab === 2 && (
-              <div className="my-8 py-6">
+              <div className="my-8 p-6">
                 <p className=" py-4">
                   <span className="font-semibold">Interface: &nbsp;</span>
                   RESTful web-API
@@ -235,7 +235,7 @@ export default function Page() {
               </div>
             )}
             {activeTab === 3 && (
-              <div className="my-8 py-6">
+              <div className="my-8 p-6">
                 <p className=" py-4">
                   <span className="font-semibold">
                     OS: &nbsp;
@@ -277,7 +277,7 @@ export default function Page() {
               </div>
             )}
             {activeTab === 4 && (
-              <div className="my-8 py-6">
+              <div className="my-8 p-6">
                 <p className=" py-4">
                   <span className="font-semibold">
                     Nuerodactyl SDK is licensed per:&nbsp;
@@ -329,7 +329,7 @@ export default function Page() {
               Any question about our products or technologies? Just text us!
             </p>
           </div>
-          <div className="mx-auto mt-12">
+          <div className="mx-auto mt-12 p-3">
             <form className="flex flex-col gap-1">
               <label className="py-3 ">Email</label>
               <input

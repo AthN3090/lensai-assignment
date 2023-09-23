@@ -1,9 +1,9 @@
 export default function About() {
   return (
-    <section id="about" className="flex items-center h-screen bg-fixed bg-no-repeat bg-cover bg-[url('/about_bg.jpg')]">
-      <div className="max-w-[800px] m-auto border p-16 bg-gray-200">
+    <section id="about" className="flex items-center min-h-screen bg-fixed bg-no-repeat bg-cover bg-[url('/about_bg.jpg')]">
+      <div className="max-w-[800px] m-auto border py-14 px-5 md:p-16 bg-gray-200">
         <p className="text-center text-5xl font-semibold text-teal-900">About us</p>
-        <p className="text-xl leading-9 mt-12 font-light text-teal-800">
+        <p className="md:text-xl leading-9 mt-5 md:mt-12 font-light text-teal-800">
           Neurodactyl is a technology start-up founded in 2023 by specialists in
           machine vision and deep learning technologies. We have vast experience
           on biometric markets and have been working with different biometric

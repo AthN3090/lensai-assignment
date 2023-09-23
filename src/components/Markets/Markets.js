@@ -7,11 +7,11 @@ import forencic from "../../../public/forensic_sm.png";
 export default function Markets() {
   return (
     <section id="market">
-      <div className="p-14 pb-28">
+      <div className="pt-14 md:p-14 pb-28">
         <div className="text-5xl font-semibold text-center text-teal-900">Markets</div>
         <div className="max-w-6xl mx-auto">
-          <div className="flex p-10 gap-8 items-center">
-            <div className="w-1/2">
+          <div className="flex pt-10 px-5 md:p-10 gap-8 flex-col md:flex-row md:items-center">
+            <div className="md:w-1/2">
               <p className="text-3xl font-semibold mb-7 tea text-teal-900">National ID</p>
               <p className="leading-7 text-teal-800">
                 National biometric system plays a key role in fraud prevention,
@@ -29,12 +29,12 @@ export default function Markets() {
                 than the same numbers for "traditional" recognition algorithms.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full flex justify-center">
               <Image src={id} alt="id" />
             </div>
           </div>
-          <div className="flex flex-row-reverse p-10 gap-8 items-center">
-            <div className="w-1/2">
+          <div className="flex flex-col pt-10 px-5 md:p-10 gap-8 md:flex-row-reverse md:items-center">
+            <div className="md:w-1/2">
               <p className="text-3xl font-semibold mb-7 text-teal-900">Banks</p>
               <p className="leading-7 text-teal-800">
                 Banks go digital today. Now good service means that a lot of
@@ -51,12 +51,12 @@ export default function Markets() {
                 than recognition with one face.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full flex justify-center">
               <Image src={bank} alt="id" />
             </div>
           </div>
-          <div className="flex p-10 gap-8 items-center">
-            <div className="w-1/2">
+          <div className="flex pt-10 px-5 md:p-10 gap-8 flex-col md:flex-row md:items-center">
+            <div className="md:w-1/2">
               <p className="text-3xl font-semibold mb-7 text-teal-900">Governmental services</p>
               <p className="leading-7 text-teal-800">
                 Biometric identification and verification expedite and secure
@@ -73,12 +73,12 @@ export default function Markets() {
                 and converted to standard format (WSQ) in legacy systems.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full flex justify-center">
               <Image src={govt} alt="id" />
             </div>
           </div>
-          <div className="flex flex-row-reverse p-10 gap-8 items-center">
-            <div className="w-1/2">
+          <div className="flex pt-10 px-5 md:p-10 gap-8 flex-col md:flex-row-reverse md:items-center">
+            <div className="md:w-1/2">
               <p className="text-3xl font-semibold text-teal-900 mb-7">Police and migration</p>
               <p className="leading-7 font-light text-teal-800">
                 Our algorithms demonstrate superior accuracy of neural networks
@@ -97,12 +97,12 @@ export default function Markets() {
                 mobile biometric terminals.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full flex justify-center">
               <Image src={police} alt="id" />
             </div>
           </div>
-          <div className="flex flex-row p-10 gap-8 items-center">
-            <div className="w-1/2">
+          <div className="flex flex-col pt-10 px-5 md:p-10  gap-8 md:flex-row md:items-center">
+            <div className="md:w-1/2">
               <p className="text-3xl font-semibold text-teal-900 mb-7">Forensics</p>
               <p className="leading-7 font-light text-teal-800">
                 Quality of latents collected from a crime scene is usually far
@@ -117,7 +117,7 @@ export default function Markets() {
                 cards and all types of fingerprints on it automatically.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full flex justify-center">
               <Image src={forencic} alt="id" />
             </div>
           </div>

@@ -6,6 +6,8 @@ import { useState } from "react";
 export default function Nav() {
   const [prodDropdwnVisible, setProdDropdwn] = useState(false);
   const [solDropdwnVisible, setSolDropdwn] = useState(false);
+  const [hamburgerActive, setHamburgerActive] = useState(false);
+
 
   return (
     <nav className="bg-teal-950 text-white flex justify-between fixed w-full">
@@ -14,10 +16,11 @@ export default function Nav() {
           <Image src={navlogo} alt="nav-logo" />
         </Link>
       </div>
-      <div className="">
-        <ul className="flex  items-center h-full">
+      
+      <div className={"absolute right-0 w-full h-fit bg-teal-950 mt-[65px] lg:block lg:static lg:mt-0 lg:w-auto lg:h-auto " + `${hamburgerActive ? "block" : "hidden"}`}>
+        <ul className="flex flex-col lg:flex-row items-center h-full">
           <li
-            className="relative flex items-center h-full p-3"
+            className="relative flex flex-col lg:flex-row lg:items-center lg:h-full p-3"
             onMouseEnter={() => {
               setProdDropdwn(true);
             }}
@@ -25,7 +28,7 @@ export default function Nav() {
               setProdDropdwn(false);
             }}
           >
-            <a href="#advantages">
+            <a href="#" className="text-center">
               Products
               <div className="inline-block h-0 w-0 align-middle border border-x-4 border-x-transparent border-b-transparent border-t-4 m-1"></div>
             </a>
@@ -34,11 +37,11 @@ export default function Nav() {
                 setProdDropdwn(false);
               }}
               className={
-                "absolute top-full -translate-x-1/2 " +
+                "lg:absolute lg:top-full " +
                 `${prodDropdwnVisible ? "block" : "hidden"}`
               }
             >
-              <ul className="bg-teal-950 w-[250px]">
+              <ul className="bg-teal-950 lg:w-[250px]">
                 <Link className href="/sdk">
                   <li className="p-3 hover:bg-teal-700">
                     Server SDK for fingerprint recognition
@@ -57,14 +60,32 @@ export default function Nav() {
               </ul>
             </div>
           </li>
-          <li className="group relative  flex items-center h-full p-3 hover:cursor-pointer ">
-            Solutions
-            <div className="inline-block h-0 w-0 align-middle border border-x-4 border-x-transparent border-b-transparent border-t-4 m-1"></div>
-            <div className="absolute left-0 top-full hidden group-hover:block">
-              <ul className="bg-teal-950 w-[250px]">
+          <li
+            className="relative flex-col flex lg:flex-row lg:items-center lg:h-full p-3 hover:cursor-pointer "
+            onMouseEnter={() => {
+              setSolDropdwn(true);
+            }}
+            onMouseLeave={() => {
+              setSolDropdwn(false);
+            }}
+          >
+            <a href="#" className="text-center">
+              Solutions
+              <div className="inline-block h-0 w-0 align-middle border border-x-4 border-x-transparent border-b-transparent border-t-4 m-1"></div>
+            </a>
+            <div
+              onClick={() => {
+                setSolDropdwn(false);
+              }}
+              className={
+                "lg:absolute lg:top-full " +
+                `${solDropdwnVisible ? "block" : "hidden"}`
+              }
+            >
+              <ul className="bg-teal-950 lg:w-[250px]">
                 <Link href="/">
                   <li className="p-3 hover:bg-teal-700">
-                  Biometric duplication
+                    Biometric duplication
                   </li>
                 </Link>
               </ul>
@@ -84,6 +105,28 @@ export default function Nav() {
             <a href="/#contact">Contacts</a>
           </li>
         </ul>
+      </div>
+      <div
+        className="lg:hidden flex flex-col items-center p-5 gap-1 justify-center z-10"
+        onClick={() => {
+          setHamburgerActive(!hamburgerActive);
+        }}
+      >
+        <div
+          className={`border-white border-[1px] h-[2px] w-5 transition duration-75 ${
+            hamburgerActive ? " translate-y-[3px] rotate-45" : ""
+          }`}
+        ></div>
+        <div
+          className={`border-white border-[1px] h-[2px] w-5 transition duration-75 ${
+            hamburgerActive ? "hidden" : ""
+          }`}
+        ></div>
+        <div
+          className={`border-white border-[1px] h-[2px] w-5 transition duration-75 ${
+            hamburgerActive ? "-translate-y-[3px] -rotate-45" : ""
+          }`}
+        ></div>
       </div>
     </nav>
   );

@@ -3,9 +3,9 @@ import { useState } from "react";
 export default function Page() {
   const [activeTab, setActiveTabs] = useState(0);
   return (
-    <main className="">
+    <main>
       <section className="bg-teal-50">
-        <div className="h-[800px] w-[800px] m-auto flex flex-col justify-center items-center gap-12">
+        <div className="min-h-[800px] max-w-[800px] m-auto flex flex-col justify-center items-center gap-9">
           <p className="text-6xl font-semibold text-center leading-snug mt-20 text-teal-900">
             Server SDK for fingerprint recognition
           </p>
@@ -28,7 +28,7 @@ export default function Page() {
       {/* Tabs Component */}
       <section className="bg-teal-50 text-teal-800">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-5 justify-between font-semibold ">
+          <div className="grid md:grid-cols-5 grid-cols-options gap-0 justify-between font-semibold overflow-x-auto">
             <button
               className={`px-7 py-4 border-b ${
                 activeTab === 0 ? "border-b-teal-700" : ""
@@ -73,14 +73,14 @@ export default function Page() {
           {/* Tabs content */}
           <div className="py-8 text-teal-900">
             {activeTab === 0 && (
-              <div className="my-8 py-6">
-                <div className="flex gap-12 py-6">
+              <div className="my-8 p-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       1
                     </div>
                   </div>
-                  <div className="">
+                  <div>
                     <p className="font-semibold text-lg">
                       Fingerprints detection
                     </p>
@@ -94,13 +94,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       2
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">
                       Biometric template extraction
                     </p>
@@ -112,13 +112,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       3
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">Matching</p>
                     <p className="font-sm mt-4">
                       The SDK compares templates against each other in different
@@ -127,13 +127,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       4
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">
                       Images decompression
                     </p>
@@ -142,13 +142,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6">
+                <div className="flex gap-9 py-6">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       5
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">Serialization</p>
                     <p className="font-sm mt-4"></p>
                   </div>
@@ -156,7 +156,7 @@ export default function Page() {
               </div>
             )}
             {activeTab === 1 && (
-              <div className="my-8 py-6">
+              <div className="my-8 p-6">
                 <p className=" my-8">
                   All processing can be performed on CPU or GPU. In terms of
                   cost-efficiency GPU processing outperforms CPU. Neurodactyl
@@ -167,13 +167,13 @@ export default function Page() {
                   better throughput. Consult our specialists to choose optimum
                   batches for your hardware.
                 </p>
-                <div className="flex gap-12 py-6 ">
+                <div className="flex gap-9 py-6 ">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       1
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">Biometric template</p>
                     <p className=" font-sm mt-4">
                       Size of biometric template is constant: 512 bytes in
@@ -183,13 +183,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6 ">
+                <div className="flex gap-9 py-6 ">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       2
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">Detection speed</p>
                     <p className=" font-sm mt-4">
                       Detection can be performed on CPU or GPU. Average
@@ -199,13 +199,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6 ">
+                <div className="flex gap-9 py-6 ">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       3
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">
                       Template extraction speed
                     </p>
@@ -217,13 +217,13 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-12 py-6 ">
+                <div className="flex gap-9 py-6 ">
                   <div>
                     <div className="w-[45px] h-[45px] flex justify-center items-center rounded-full border border-black">
                       4
                     </div>
                   </div>
-                  <div className="">
+                  <div >
                     <p className="font-semibold text-lg">Matching speed</p>
                     <p className=" font-sm mt-4">
                       100 million matching operation per 1 s on one modern CPU.
@@ -245,7 +245,7 @@ export default function Page() {
               </div>
             )}
             {activeTab === 2 && (
-              <div className="my-8 py-6">
+              <div className="my-8 p-6">
                 <p className="py-4">
                   <span className="font-semibold">Interfaces: &nbsp;</span>
                   C++, C# with code examples. Neurodactyl REST API platform is
@@ -258,7 +258,7 @@ export default function Page() {
               </div>
             )}
             {activeTab === 3 && (
-              <div className="my-8 py-6">
+              <div className="my-8 p-6">
                 <p className="py-4">
                   <span className="font-semibold">
                     Minimum HW requirements: &nbsp;
@@ -304,7 +304,7 @@ export default function Page() {
               </div>
             )}
             {activeTab === 4 && (
-              <div className="my-8 py-6">
+              <div className="my-8 p-6">
                 <p className="py-4">
                   <span className="font-semibold">
                     Nuerodactyl SDK is licensed per:&nbsp;
@@ -356,7 +356,7 @@ export default function Page() {
               Any question about our products or technologies? Just text us!
             </p>
           </div>
-          <div className="mx-auto mt-12">
+          <div className="mx-auto mt-12 p-3">
             <form className="flex flex-col gap-1">
               <label className="py-3 font-medium">Email</label>
               <input

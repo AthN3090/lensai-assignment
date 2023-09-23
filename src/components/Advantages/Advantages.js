@@ -8,11 +8,11 @@ import accurate from "../../../public/target.png";
 export default function Advantages() {
   return (
     <section id="advantages" className="bg-teal-900">
-      <div className="p-14 pb-28">
+      <div className="py-14 md:p-14 pb-28">
         <div className="text-5xl font-semibold text-center text-white">
           Advantages
         </div>
-        <div className="grid grid-cols-3 max-w-6xl mx-auto mt-16 text-white gap-11">
+        <div className="grid md:grid-cols-3 max-w-6xl mx-auto mt-16 text-white gap-11">
           <div className="flex flex-col gap-6 items-center p-2 text-center">
             <Image src={rocket} alt="rocket" />
             <p className="text-md font-semibold">Superior accuracy</p>

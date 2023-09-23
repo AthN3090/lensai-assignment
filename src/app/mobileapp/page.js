@@ -2,9 +2,9 @@ export default function page() {
   return (
     <main>
       <section className="bg-teal-50">
-        <div className="flex justify-center max-w-[1200px] items-center pt-[150px] py-[30px] mx-auto">
-          <div className="flex flex-col w-[60%]">
-            <p className="text-6xl font-semibold leading-snug text-teal-800">
+        <div className="flex md:flex-row flex-col max-w-[1200px] md:items-center pt-[150px] py-[30px] mx-auto">
+          <div className="flex flex-col md:w-[60%] p-3">
+            <p className="text-5xl md:text-6xl font-semibold leading-snug text-teal-800">
               Server platform for fingerprint recognition
             </p>
             <p className="leading-relaxed text-lg  py-9 text-teal-700">
@@ -24,7 +24,7 @@ export default function page() {
               accurate than, for example, using one facial image.
             </p>
           </div>
-          <div className="w-[40%]">
+          <div className="md:w-[40%]">
             <video
               className="w-[300px] mx-auto"
               src="/finger_capture.mp4"
@@ -35,7 +35,7 @@ export default function page() {
         </div>
       </section>
       <section className=" bg-teal-50 py-12">
-        <div className="max-w-[1200px] mx-auto text-teal-800">
+        <div className="max-w-[1200px] mx-auto text-teal-800 p-3">
           <p className="font-semibold text-3xl ">Features:</p>
           <ul className="list-disc p-4 text-lg">
             <li className="p-1">
@@ -53,27 +53,27 @@ export default function page() {
               mobile device
             </li>
           </ul>
-          <p className="">
+          <p >
             Available platforms: Android, iOS (coming soon), web. <br />
             HW requirements: mobile device with rear camera, focus control and
             torch.
           </p>
         </div>
       </section>
-      <section className="bg-teal-50 py-14">
-      <div className="max-w-[1200px] mx-auto bg-slate-600 py-[80px] px-[30px] bg-teal-800">
+      <section className="bg-teal-800 py-14">
+      <div className="max-w-[1200px] mx-auto py-[80px] px-[30px] bg-teal-800">
           <div className="text-white">
             <p className="font-semibold text-5xl text-center">Try without installation</p>
             <p className="text-center  text-xl mt-7">
             Send us a request for getting access to demo app in web
             </p>
           </div>
-          <div className="mx-auto mt-7">
-            <form className="flex gap-4 justify-center">              
-              <input className="p-3 rounded-md border placeholder:text-sm" placeholder="Your Email" type="email"></input>              
-              <input className="p-3 rounded-md border placeholder:text-sm" placeholder="Your Name" type="text"></input>             
-              <input className="p-3 rounded-md border placeholder:text-sm" placeholder="Your Company" type="text"></input>
-              <button className="py-3 px-10 rounded-md  w-fit bg-teal-950 text-white">Send</button>
+          <div className="flex justify-center mt-7">
+            <form className="flex gap-4 items-center flex-col sm:flex-row sm:justify-center">              
+              <input className="w-full p-3 rounded-md border placeholder:text-sm" placeholder="Your Email" type="email"></input>              
+              <input className="w-full p-3 rounded-md border placeholder:text-sm" placeholder="Your Name" type="text"></input>             
+              <input className="w-full p-3 rounded-md border placeholder:text-sm " placeholder="Your Company" type="text"></input>
+              <button className="py-3 px-10 rounded-md w-full sm:w-fit bg-teal-950 text-white">Send</button>
             </form>
           </div>
         </div>
